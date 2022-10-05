@@ -20,8 +20,10 @@ const HomeScreen = () => {
   const [characterName, setCharacterName]= useState('')
   const [classDesired, setClassDesired]= useState('')
 
+  const navigation = useNavigation();
+
   const dbRef = ref(getDatabase());
-  get(child(dbRef, `Users/`)).then((snapshot) => {
+  get(child(dbRef, `users/`)).then((snapshot) => {
   if (snapshot.exists()) {
     console.log(snapshot.val());
   } else {
@@ -39,7 +41,12 @@ const HomeScreen = () => {
       set(ref(db, 'users/' + name + '/' + characterName), {
         class: classDesired,
       });
+      navigation.navigate('SelectUser')
     };
+
+  const selectUser = () => {
+    navigation.navigate('SelectUser')
+  }
 
   return(
     <KeyboardAvoidingView style={styles.container} behavior="padding">
@@ -69,6 +76,12 @@ const HomeScreen = () => {
             style={styles.button}
           >
             <Text style={styles.buttonText}>Add User</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={selectUser}
+            style={[styles.button, styles.buttonOutline]}
+          >
+            <Text style={styles.buttonOutlineText}>Select User</Text>
           </TouchableOpacity>
         </View>
     </KeyboardAvoidingView>

@@ -5,6 +5,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginScreen from './screens/loginscreen'
 import HomeScreen from './screens/homescreen'
+import SelectUser from './screens/selectUser'
+import SelectCharecter from './screens/selectCharecter'
 
 export default function App() {
 
@@ -14,6 +16,8 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen name="Login" component={LoginScreen}/>
         <Stack.Screen name="Home" component={HomeScreen}/>
+        <Stack.Screen name="SelectUser" component={SelectUser}/>
+        <Stack.Screen name="SelectCharecter" component={SelectCharecter}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
