@@ -43,11 +43,19 @@ const SelectCharecter = ({route}) => {
 
   const dbRef = ref(getDatabase());
 
+  const charecterWasSelected = (char) => {
+    console.log('char', typeof char)
+    navigation.navigate('CharecterInfo',{
+      user:{user}.user,
+      char:char
+    })
+  }
+
   return(
     <KeyboardAvoidingView>
       <View>
           <Text>Select Charecter</Text>
-          {charecterName?.length ? charecterName.map((data, index) => { return ( <Text key={index} >{data[0]}</Text> )}) : null}
+          {charecterName?.length ? charecterName.map((data, index) => { return ( <Text onPress={() => charecterWasSelected(data[0])} key={index} >{data[0]}</Text> )}) : null}
       </View>
     </KeyboardAvoidingView>
   )

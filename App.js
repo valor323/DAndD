@@ -7,6 +7,7 @@ import LoginScreen from './screens/loginscreen'
 import HomeScreen from './screens/homescreen'
 import SelectUser from './screens/selectUser'
 import SelectCharecter from './screens/selectCharecter'
+import CharecterInfo from './screens/charecterInfo'
 
 export default function App() {
 
@@ -18,6 +19,7 @@ export default function App() {
         <Stack.Screen name="Home" component={HomeScreen}/>
         <Stack.Screen name="SelectUser" component={SelectUser}/>
         <Stack.Screen name="SelectCharecter" component={SelectCharecter}/>
+        <Stack.Screen name="CharecterInfo" component={CharecterInfo}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

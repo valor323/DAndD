@@ -40,6 +40,74 @@ const HomeScreen = () => {
       const db = getDatabase();
       set(ref(db, 'users/' + name + '/' + characterName), {
         class: classDesired,
+        level:'edit to add',
+        background: 'edit to add',
+        race: 'edit to add',
+        alignment: 'edit to add',
+        experience_Points: 'edit to add',
+        proficiency_Bonus: 'edit to add',
+        armor_Class: 'edit to add',
+        initiative: 'edit to add',
+        speed: 'edit to add',
+        current_Hit_Points: 'edit to add',
+        temporary_Hit_Points: 'edit to add',
+        strength: 'edit to add',
+        dexterity: 'edit to add',
+        constitution: 'edit to add',
+        intelligence: 'edit to add',
+        wisdom: 'edit to add',
+        charisma: 'edit to add',
+        cp: 'edit to add',
+        sp: 'edit to add',
+        ep: 'edit to add',
+        gp: 'edit to add',
+        pp: 'edit to add',
+        backpack:{
+
+        },
+        savingThrows:{
+          strength: 'Stregnth',
+          dexterity: 'Dexterity',
+          constitution: 'Constitution',
+          intelligence: 'Intelligence',
+          wisdom: 'Wisdom',
+          charisma: 'Charisma'
+        },
+        skills:{
+          acrobatics: 'Acrobatics(Dex)',
+          animalHandling: 'Animal Handling(Wis)',
+          arcana: 'Arcana(Int)',
+          athletics: 'Athletics(Str)',
+          deception: 'Deception(Cha)',
+          history: 'History(Int)',
+          insight: 'Insight(Wis)',
+          intimidation: 'Intimidation(Cha)',
+          investigation: 'Investigation(Int)',
+          medicine: 'Medicine(Wis)',
+          nature: 'Nature(Int)',
+          perception: 'Perception(Wis)',
+          performance: 'Performance(Cha)',
+          persuasion: 'Persuasion(Cha)',
+          religion: 'Religion(Int)',
+          sleightOfHand: 'Sleight of Hand(Dex)',
+          stealth: 'Stealth(Dex)',
+          survival: 'Survival(Wis)'
+        },
+        weapons:{
+
+        },
+        other_Proficiencies_And_Languages:{
+
+        },
+        features_And_Traits: {
+
+        },
+        equipment:{
+
+        },
+
+
+
       });
       navigation.navigate('SelectUser')
     };
